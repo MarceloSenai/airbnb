@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/airbnb", "destination": "/airbnb/index.html" },
+    { "source": "/airbnb/(.*)", "destination": "/airbnb/$1" }
+  ]
+}
