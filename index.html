@@ -11,6 +11,7 @@
         transition: transform 0.3s ease-in-out;
       }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body class="bg-white text-gray-800 font-sans">
     <!-- Hero Section -->
@@ -136,7 +137,7 @@
     </section>
 
     <!-- CTAs -->
-    <section class="text-center py-10 px-4">
+    <secti  on class="text-center py-10 px-4">
       <div class="space-y-4">
         <a href="https://pay.hotmart.com/J99034027D" class="bg-blue-400 hover:bg-blue-500 text-white py-3 px-6 rounded-full text-lg font-semibold">Quero meu eBook agora</a><br>
                       </div>
@@ -152,42 +153,146 @@
       </div>
     </section>
 
-    <!-- Depoimentos -->
-    <section class="px-6 py-12 bg-white">
-      <div class="max-w-6xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-blue-500 mb-10">💬 O que estão dizendo</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
-          <div class="bg-gray-50 p-4 rounded shadow">
-            <p class="italic text-gray-700">“Com as dicas do guia, consegui deixar meu apartamento mais atrativo e dobrar minhas reservas.”</p>
-            <div class="mt-4 flex items-center">
-              <img src="https://i.pravatar.cc/50?img=1" alt="Depoimento 1" class="w-10 h-10 rounded-full mr-3">
-              <span class="text-sm font-semibold text-gray-600">Fernanda M.</span>
-            </div>
-          </div>
-          <div class="bg-gray-50 p-4 rounded shadow">
-            <p class="italic text-gray-700">“Excelente conteúdo, direto ao ponto e super prático para quem está começando.”</p>
-            <div class="mt-4 flex items-center">
-              <img src="https://i.pravatar.cc/50?img=2" alt="Depoimento 2" class="w-10 h-10 rounded-full mr-3">
-              <span class="text-sm font-semibold text-gray-600">Carlos T.</span>
-            </div>
-          </div>
-          <div class="bg-gray-50 p-4 rounded shadow">
-            <p class="italic text-gray-700">“O checklist de bônus foi um diferencial enorme! Muito útil mesmo.”</p>
-            <div class="mt-4 flex items-center">
-              <img src="https://i.pravatar.cc/50?img=3" alt="Depoimento 3" class="w-10 h-10 rounded-full mr-3">
-              <span class="text-sm font-semibold text-gray-600">Juliana R.</span>
-            </div>
-          </div>
-          <div class="bg-gray-50 p-4 rounded shadow">
-            <p class="italic text-gray-700">“Já usava o Airbnb, mas depois do eBook consegui alcançar Superhost em 3 meses.”</p>
-            <div class="mt-4 flex items-center">
-              <img src="https://i.pravatar.cc/50?img=4" alt="Depoimento 4" class="w-10 h-10 rounded-full mr-3">
-              <span class="text-sm font-semibold text-gray-600">Rafael D.</span>
-            </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      
+      breakpoints: {
+          640: {
+            slidesPerView: 1,
+              },
+          768: {
+            slidesPerView: 2,
+              },
+          1024: {
+            slidesPerView: 3,
+              },
+          1280: {
+            slidesPerView: 4,
+              }
+        }
+
+    });
+  });
+</script>
+    
+    <!-- Seção: Depoimentos -->
+<section class="bg-white py-12">
+  <div class="max-w-4xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-bold text-blue-500 mb-6">📢 O que estão dizendo</h2>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“Com as dicas do guia, consegui deixar meu apartamento mais atrativo e dobrar minhas reservas.”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=1" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Fernanda M.</span>
           </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“Excelente conteúdo, direto ao ponto e super prático para quem está começando.”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=2" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Carlos T.</span>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“O checklist de bônus foi um diferencial enorme! Muito útil mesmo.”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=3" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Juliana R.</span>
+          </div>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“Já usava o Airbnb, mas depois do eBook consegui alcançar Superhost em 3 meses.”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=4" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Rafael D.</span>
+          </div>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“Simples, direto e sem enrolação. Vale cada centavo.”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=5" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Patrícia F.</span>
+          </div>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“Comprei por curiosidade e fui surpreendido. Muito conteúdo útil.”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=6" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Leonardo G.</span>
+          </div>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“Fiz as primeiras alterações no meu anúncio e já recebi mais visitas.”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=7" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Marta B.</span>
+          </div>
+        </div>
+
+        <!-- Slide 8 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“Gostei muito da linguagem acessível e das estratégias práticas.”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=8" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Eduardo H.</span>
+          </div>
+        </div>
+
+        <!-- Slide 9 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“Meu imóvel estava sem reserva há semanas e agora voltou a bombar!”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=9" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Bruna L.</span>
+          </div>
+        </div>
+
+        <!-- Slide 10 -->
+        <div class="swiper-slide bg-gray-50 p-6 shadow rounded">
+          <p class="italic text-gray-700 mb-4">“Nota 10! Já recomendei pra vários amigos.”</p>
+          <div class="flex items-center justify-center gap-2">
+            <img src="https://i.pravatar.cc/50?img=10" class="w-10 h-10 rounded-full">
+            <span class="text-sm font-semibold text-gray-600">Thiago M.</span>
+          </div>
+        </div>
+
       </div>
-    </section>
+
+      <!-- Paginação -->
+      <div class="swiper-pagination mt-6"></div>
+    </div>
+  </div>
+</section>
 
     <!-- FAQ -->
     <section class="px-6 py-12 bg-white">
@@ -211,10 +316,25 @@
     </section>
 
 <!-- Footer -->
-<footer class="bg-gray-100 text-center py-6">
-  <p class="text-gray-600 mb-2">Todos os direitos autorais reservados</p>
-  <p class="text-gray-600 mb-2">📧 Contato: contato.casadosebooks@gmail.com</p>
-  <p class="text-gray-600">📱 Siga no Instagram: <a href="https://instagram.com/contato.casadosebooks" class="text-blue-500 hover:underline">@contato.casadosebooks</a></p>
+<footer class="bg-gray-100 text-center py-6 text-gray-600 text-sm flex flex-wrap justify-center items-center gap-3">
+  <span class="inline-flex items-center gap-1">
+    <!-- Ícone de e-mail -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12H8m8 0H8m2-2h4m-6 0h.01M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2v-7m0 0V7a2 2 0 012-2h14a2 2 0 012 2v5z" />
+    </svg>
+    contato.casadosebooks@gmail.com
+  </span>
+  |
+  <span class="inline-flex items-center gap-1">
+    <!-- Ícone do Instagram -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.25-.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
+    </svg>
+    <a href="https://instagram.com/contato.casadosebooks" class="text-blue-500 hover:underline" target="_blank">@contato.casadosebooks</a>
+  </span>
+  |
+  © Todos os direitos reservados
 </footer>
+
   </body>
 </html>
